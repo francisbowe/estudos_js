@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diga o seu pais</title>
+</head>
+<body>
+    <h1>condição if COMPOSTA</h1>
+    <h2>Diga a sua nacionalidade</h2>
+    Nacionalidade: <input type="text" name="txtnacionalidade" id="txtnacionalidade" >
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res">
+
+    </div>
+    <script>
+        function verificar() {
+            var pais = document.querySelector('input#txtnacionalidade')
+            var res = document.querySelector('div#res')
+
+            if (pais.value == "angola") {
+                res.innerHTML += `<p>A sua nacionalidade é <strong> ${pais.value} </strong> </P>`
+            } else {
+                res.innerHTML += `<p><stronga> Você é estrangeiro </stronga> </P>`
+            }
+        }
+    </script>
+</body>
+</html>
